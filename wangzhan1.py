@@ -177,19 +177,19 @@ if uploaded_file is not None:
             fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
 
             # 拟合结果图
-            ax1.scatter(x, y, s=15, c='orange', alpha=0.7, label='原始实验数据')
-            ax1.plot(x, y_fit, 'b-', lw=2.5, label='DE+LM 拟合结果')
-            ax1.set_title('高精度拟合结果')
+            ax1.scatter(x, y, s=15, c='orange', alpha=0.7, label='yuan_shi_shu_ju')
+            ax1.plot(x, y_fit, 'b-', lw=2.5, label='DE+LM ni_he_jie_guo')
+            ax1.set_title('ni_he_jie_guo')
             ax1.legend()
             ax1.grid(alpha=0.3)
 
             # 收敛曲线
-            ax2.plot(de_hist, label='DE 全局搜索', c='blue')
-            ax2.plot(np.arange(len(de_hist), len(de_hist) + len(lm_hist)), lm_hist, label='LM 精细收敛', c='red')
-            ax2.set_xlabel('迭代次数')
-            ax2.set_ylabel('损失')
+            ax2.plot(de_hist, label='DE guan—_ju', c='blue')
+            ax2.plot(np.arange(len(de_hist), len(de_hist) + len(lm_hist)), lm_hist, label='LM shou_lian', c='red')
+            ax2.set_xlabel('die_dai_ci_shu')
+            ax2.set_ylabel('sun_shi')
             ax2.set_yscale('log')
-            ax2.set_title('DE+LM 联合优化收敛曲线')
+            ax2.set_title('DE+LM qu_xian')
             ax2.legend()
             ax2.grid(alpha=0.3)
 
