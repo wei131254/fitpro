@@ -3,7 +3,19 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import matplotlib.pyplot as plt
+import matplotlib
 
+# 加载你自己的中文字体
+font_path = './SimHei.ttf'
+font_prop = matplotlib.font_manager.FontProperties(fname=font_path)
+
+# 然后你画图的时候，所有的中文都指定这个字体：
+plt.title('DE+LM 算法拟合结果图', fontproperties=font_prop)
+plt.xlabel('x轴', fontproperties=font_prop)
+plt.ylabel('y轴', fontproperties=font_prop)
+# 图例也要加
+plt.legend(prop=font_prop)
 # 中文显示
 plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
