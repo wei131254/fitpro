@@ -16,7 +16,15 @@ plt.rcParams['axes.unicode_minus'] = False
 # 统一美观的绘图风格
 sns.set_style("whitegrid", {'grid.linestyle': ':', 'grid.alpha': 0.3})
 sns.set(font='Microsoft YaHei', font_scale=1.1)
+import matplotlib.font_manager as fm
+# 加载我们打包进去的微软雅黑字体，不管线上线下，都能用这个字体
+font_path = './msyh.ttf'  # 就是你刚上传的字体文件的路径
+my_font = fm.FontProperties(fname=font_path)
 
+# 全局设置所有画图的字体
+plt.rcParams['font.sans-serif'] = [my_font.get_name()]
+plt.rcParams['axes.unicode_minus'] = False
+sns.set(font=my_font.get_name(), font_scale=1.1)
 
 # --------------------------
 # 通用拟合用的DE+LM（你给的代码里的原始版本，保证可视化一致）
