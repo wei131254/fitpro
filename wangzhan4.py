@@ -83,7 +83,7 @@ def DE_optimize(x, y, param_count, pop=50, F=0.6, CR=0.7, max_iter=50):
                 fits[i] = f_trial
                 if f_trial < loss(best, x, y):
                     best = trial.copy()
-            history.append(loss(best, x, y))
+        history.append(loss(best, x, y))
     return best, history
 
 # LM 优化器（你给的版本，返回损失历史）
